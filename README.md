@@ -26,6 +26,15 @@ Estimate of time needed to complete: 2 hours
 
 Start time: 3:00 pm
 
-Finish time: _____
+Finish time: 5
 
-Actual time needed to complete: _____
+Actual time needed to complete: 2
+
+Name of feature:can render data from a movies api and weather api
+Estimate of time needed to complete: 2 hours
+
+Start time: 3:00 pm
+
+Finish time: 6:00 pm
+
+Actual time needed to complete: 3 hours
