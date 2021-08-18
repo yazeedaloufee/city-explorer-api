@@ -38,3 +38,13 @@ Start time: 3:00 pm
 Finish time: 6:00 pm
 
 Actual time needed to complete: 3 hours
+
+
+Name of feature:modularized the code.
+Estimate of time needed to complete: 2 hours
+
+Start time: 12:00 am
+
+Finish time: 1:00 am
+
+Actual time needed to complete: 1 hours
