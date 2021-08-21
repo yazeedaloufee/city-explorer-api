@@ -1,5 +1,6 @@
 "use strict"
 const axios = require('axios')
+let weathercache={}
 
 let weatherhandle = async (req, res) => {
     let lon = req.query.lon;
@@ -7,6 +8,12 @@ let weatherhandle = async (req, res) => {
     let searchQuery = req.query.searchQuery;
 
     let array = [];
+
+    if(undefined!==weathercache[searchQuery]){
+        res.send(weathercache[searchQuery])
+        console.log('miss cache, data is already in cache');
+    }
+    else{
 
     let weatherLink = `https://api.weatherbit.io/v2.0/forecast/daily?key=${process.env.WEATHER_API_KEY}&city=${searchQuery}&lat=${lat}&lon=${lon}`;
     let weatherData = await axios.get(weatherLink);
@@ -19,8 +26,11 @@ let weatherhandle = async (req, res) => {
         array.push(objectVariable)
     })
     // console.log(array);
+    weathercache[searchQuery]=array;
+    console.log('hit cache, data called and saved');
+
     res.send(array);
-}
+}}
 
 class Forcast {
     constructor(date, description) {
